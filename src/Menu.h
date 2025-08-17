@@ -1,5 +1,6 @@
 //
-// Created by Joshua Sevy on 8/16/25.
+// Author: Joshua Sevy
+// Created on: 8/16/25
 //
 
 #ifndef MENU_H
