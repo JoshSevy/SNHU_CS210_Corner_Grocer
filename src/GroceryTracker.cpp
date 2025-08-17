@@ -19,11 +19,20 @@ GroceryTracker::GroceryTracker(const string &dataInputPath, const string &backUp
     loadInputData();
 }
 
+/**
+ * @description Returns the count of a specific item in the frequency map.
+ * @param item The item to get the count for.
+ * @return The count of the item, or 0 if the item is not found.
+ */
 int GroceryTracker::getCount(const string &item) const {
     auto singleItem = frequencyMap.find(item);
     return singleItem == frequencyMap.end() ? 0 : singleItem->second;
 }
 
+/**
+ * @description Checks if the frequency map has any data.
+ * @return True if the frequency map is not empty, false otherwise.
+ */
 bool GroceryTracker::hasData() const {
     return !frequencyMap.empty(); // Check if the frequency map has any data
 }
@@ -55,6 +64,9 @@ bool GroceryTracker::loadInputData() {
     return true;
 }
 
+/**
+ * @description Prints all items and their counts in the frequency map.
+ */
 void GroceryTracker::printAll() const {
     if (frequencyMap.empty()) {
         cout << "No data available." << endl;
@@ -65,6 +77,10 @@ void GroceryTracker::printAll() const {
     }
 }
 
+/**
+ * @description Prints a histogram of the frequency map using the specified symbol.
+ * @param symbol The character to use for the histogram bars (default is '*').
+ */
 void GroceryTracker::printHistogram(char symbol) const {
     if (frequencyMap.empty()) {
         cout << "No data available." << endl;
@@ -79,6 +95,10 @@ void GroceryTracker::printHistogram(char symbol) const {
     }
 }
 
+/**
+ * @description Writes the frequency data to the backup file.
+ * This function iterates through the frequency map and writes each item and its count to the backup file.
+ */
 void GroceryTracker::writeFrequencyData() const {
     ofstream dataOut(backUpDataPath);
     if (!dataOut) {
