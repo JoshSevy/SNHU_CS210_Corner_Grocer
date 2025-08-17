@@ -32,14 +32,14 @@ bool GroceryTracker::hasData() const {
  * @description Destructor for GroceryTracker class.
  */
 bool GroceryTracker::loadInputData() {
-    ifstream data(inputFilePath);
-    if (!data) {
+    ifstream dataIn(inputFilePath);
+    if (!dataIn) {
         cout << "Error opening file " << inputFilePath << endl;
         return false;
     }
     frequencyMap.clear(); // Clear the map before loading new data
     string line; // Using getLine to read each line for single work items and multiple words per line
-    while (getline(data, line)) {
+    while (getline(dataIn, line)) {
         // TODO: Add string trimming to remove leading/trailing whitespace
         if (line.empty() || line[0] == '#') {
             continue; // Skip empty lines and comments
@@ -49,7 +49,7 @@ bool GroceryTracker::loadInputData() {
         }
     }
 
-    data.close(); // Close the file after reading
+    dataIn.close(); // Close the file after reading
     // TODO: Add writing to the frequency map to the backup file
     writeFrequencyData();
     return true;
@@ -80,13 +80,13 @@ void GroceryTracker::printHistogram(char symbol) const {
 }
 
 void GroceryTracker::writeFrequencyData() const {
-    ofstream data(backUpDataPath);
-    if (!data) {
+    ofstream dataOut(backUpDataPath);
+    if (!dataOut) {
         cout << "Error opening file " << backUpDataPath << endl;
         return;
     }
     for (const auto &pair : frequencyMap) {
-        data << pair.first << ": " << pair.second << endl; // Write each item and its count
+        dataOut << pair.first << ": " << pair.second << endl; // Write each item and its count
     }
-    data.close(); // Close the file after writing
+    dataOut.close(); // Close the file after writing
 }
