@@ -8,5 +8,4 @@ add_executable(CornerGrocerJCS src/main.cpp
         src/GroceryTracker.h
         src/Menu.cpp
         src/Menu.h
-        src/Utils.cpp
-        src/Utils.h)
+)
