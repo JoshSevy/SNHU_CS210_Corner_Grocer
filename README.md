@@ -1,3 +1,5 @@
+[![CMake on a single platform](https://github.com/JoshSevy/SNHU_CS210_Corner_Grocer/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/JoshSevy/SNHU_CS210_Corner_Grocer/actions/workflows/cmake-single-platform.yml)
+
 # Corner Grocer Item Tracker
 
 ## Module 8 Journal Guide
