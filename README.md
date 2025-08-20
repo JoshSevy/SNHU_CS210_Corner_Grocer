@@ -11,18 +11,23 @@ This project is a grocery item tracker for the Corner Grocer, designed to analyz
 ### Q&A
 
 **What did you do particularly well?**  
+
 One aspect I have improved throughout the projects is my ability to structure code in a way that is both maintainable and readable. I focused on using classes effectively, separating concerns between the GroceryTracker, Menu, and Utils classes. This modular approach makes updates and debugging easier, while also allowing the application to grow without becoming overly complex.
 
 **Where could you enhance your code? How would these improvements make your code more efficient, secure, and so on?**  
+
 One thing that I can enhance is better error checking and input validation. It would enhance the program's usability and remove issues caused by incorrect input. For example, verifying that the user enters the correct item name or number would avoid crashes and give a better user experience. Enhancing it would also involve adding logging to track user activity and errors for more convenient debugging and future development.
 
 **Which pieces of the code did you find most challenging to write, and how did you overcome this? What tools or resources are you adding to your support network?**  
+
 The most challenging part was setting up the file I/O so the program could reliably read from the input file and write to frequency.dat. At first, it took some trial and error to get the program to properly recognize the .txt file and handle situations where the file path or name was incorrect. To solve this, I built the functionality step by step, starting with just reading the file before adding item counting and writing results. I leaned on examples from zyBooks for reference and used Microsoft’s official C++ documentation to better understand how file streams work. Going forward, I plan to keep building my support network with reliable references like Microsoft’s documentation and cplusplus.com, which will help me strengthen my skills with C++.
 
 **What skills from this project will be particularly transferable to other projects or course work?**  
+
 A key skill I developed in this project is applying organized object-oriented programming practices in C++. While I already work with object-oriented design in my career, this project allowed me to structure an application into clear, maintainable classes in a language that requires more explicit memory and type management. I also deepened my understanding of C++ data structures, especially how maps can be used for efficient frequency counting and lookups. These skills strengthen both my fluency with C++ and my ability to design scalable, efficient applications for future coursework and professional projects.
 
 **How did you make this program maintainable, readable, and adaptable?**  
+
 I made this program easy to maintain and flexible by maintaining a simple and uniform design. Every class has been given a separate responsibility, so the code remains well-defined and easier to extend or change in the future. I have used descriptive names so that every function or variable is understandable as to why it is there, and comments have been included to clarify the more important aspects of the logic. I have also inserted basic input validation in the menu to make the program user-friendly and prevent runtime errors. Through this approach, the program can be easily expanded without major changes. For instance, multiple input files or new report types can be added without rewriting the entire application.
 
 ---
